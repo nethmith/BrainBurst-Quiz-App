@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrainBurst Quiz App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="start-screen">
+        <h1 class="heading">BrainBurst Quiz</h1>
+        <div class="settings">
+          <div class="setting">
+            <label for="num-questions">Number of Questions:</label>
+            <select id="num-questions">
+              <option value="5">Enter Number</option>
+              <option value="5">5</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="30">30</option>
+              <option value="40">40</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+          <div class="setting">
+            <label for="category">Select Category:</label>
+            <select id="category">
+              <option value="">Any Category</option>
+              <option value="9">General Knowledge</option>
+              <option value="10">Books</option>
+              <option value="11">Films</option>
+              <option value="12">Music</option>
+              <option value="14">Television</option>
+              <option value="15">Video Games</option>
+              <option value="16">Board Games</option>
+              <option value="17">Science & Nature</option>
+              <option value="18">Computers</option>
+              <option value="19">Mathematics</option>
+              <option value="20">Mythology</option>
+              <option value="21">Sports</option>
+              <option value="22">Geography</option>
+              <option value="23">History</option>
+              <option value="24">Politics</option>
+              <option value="25">Art</option>
+              <option value="28">Vehicles</option>
+            </select>
+          </div>
+          <div class="setting">
+            <label for="difficulty">Select Difficulty:</label>
+            <select id="difficulty">
+              <option value="">Any Difficulty</option>
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <div class="setting">
+            <label for="time">Time per Question:</label>
+            <select id="time">
+              <option value="10">Enter Time</option>
+              <option value="10">10 seconds</option>
+              <option value="15">15 seconds</option>
+              <option value="20">20 seconds</option>
+              <option value="25">25 seconds</option>
+              <option value="30">30 seconds</option>
+              <option value="60">60 seconds</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn start">Start Quiz</button>
+      </div>
+
+      <div class="quiz hide">
+        <div class="timer">
+          <div class="progress">
+            <div class="progress-bar"></div>
+            <span class="progress-text"></span>
+          </div>
+        </div>
+        <div class="question-wrapper">
+          <div class="number">
+            Question <span class="current">1</span>
+            <span class="total">/10</span>
+          </div>
+          <div class="question"></div>
+        </div>
+        <div class="answer-wrapper"></div>
+        <button class="btn submit" disabled>Submit Answer</button>
+        <button class="btn next hide">Next Question</button>
+      </div>
+
+      <div class="end-screen hide">
+        <h1 class="heading">Quiz Completed!</h1>
+        <div class="score">
+          <span class="score-text">Your score:</span>
+          <div class="score-value">
+            <span class="final-score">0</span>
+            <span class="total-score">/10</span>
+          </div>
+        </div>
+        <button class="btn restart">Restart Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
